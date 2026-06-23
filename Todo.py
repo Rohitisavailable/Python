@@ -5,7 +5,7 @@ while True:
     user_action = user_action.strip()
  
 
-        # check if user action is "add"
+        # check if user action is "add "Add a todo""
     if 'add' in user_action:
         todo = user_action[4:]
         
