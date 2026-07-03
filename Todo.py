@@ -29,14 +29,17 @@ while True:
         
         
     elif 'edit' in user_action:
-        number = user_action[5:]
+        number = int(user_action[5:])
+        print(number)
+
         number = number - 1
 
         with open('todos.txt', 'r') as file:
             file.readlines()
         
-        new_todo = user_action[5:]
-        todos[number] = new_todo
+        
+        new_todo = input("Enter new todo: ")
+        todos[number] = new_todo + '\n'
 
         print('Here is how it will be ', todos)
 
@@ -60,5 +63,7 @@ while True:
         
     elif 'exit' in user_action:
         break
+    else:
+        print("Command is not valid")
 
 print("Bye!")
